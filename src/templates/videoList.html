@@ -2,6 +2,6 @@
   <video-list-entry 
     videos = "video"
     ng-repeat="video in $ctrl.videos track by $index"
-    ng-click = "$ctrl.videoclick()"
+    ng-click="$ctrl.function(video)"
   />
 </ul>

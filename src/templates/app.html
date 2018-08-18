@@ -6,14 +6,14 @@
   </nav>
   <div class="row">
     <div class="col-md-7">
-      <video-player 
+      <video-player   
       video = '$ctrl.currentVideo'
       />
     </div>
     <div class="col-md-5">
       <video-list 
         videos = "$ctrl.videos"
-        ng-click = "$ctrl.videoclick"
+         function="$ctrl.videoclick"
       />
     </div>
   <div>
