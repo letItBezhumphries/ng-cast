@@ -15,20 +15,19 @@ angular.module('video-player')
         this.currentVideo = video; //setting the currentVideo to the clicked video
       };
 
-      // this.searchvideos = (data) => {
-      //   this.videos = this.data;
-      //   this.currentVideo = this.videos[0];
-      // };
-
-     this.appendvideos = (data) => {
-      this.videos = data;
-      this.currentVideo = data[0];
-     }
+      this.appendvideos = (data) => {
+        this.videos = data;
+        this.currentVideo = data[0];
+      };
 
       this.searchthis = (data) => {
-        console.log('eric is really cool ', data);
-        console.log('what is love ', this.query)
         this.search(data, this.appendvideos);
+      };
+
+      this.autoplay = () => {
+        if (this.autoplay) {
+          
+        }
       };
     }
    

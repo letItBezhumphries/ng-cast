@@ -12,9 +12,9 @@ angular.module('video-player')
           embeddableVideos: 'true',
         },
       }).then(function(data) {
-          console.log('whats up my doggie ', appendvideos)
-         appendvideos(data.data.items)
-         console.log(data.data.items);
+        console.log('whats up my doggie ', appendvideos);
+        appendvideos(data.data.items);
+        console.log(data.data.items);
       });
     };
   }); 

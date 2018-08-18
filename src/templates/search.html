@@ -3,7 +3,9 @@
   ng-model= "boxval"
   textsearch = "boxval"
     class="form-control" 
-      type="text" />
+      type="text"
+      ng-change="$ctrl.searchthis(boxval)"
+      ng-model-options="{debounce: 500}" />
   <button ng-click='$ctrl.searchthis(boxval)'
     class="btn">
     <span class="glyphicon glyphicon-search"></span>

@@ -11,9 +11,11 @@
   <div class="row">
     <div class="col-md-7">
       <video-player   
+      autoplay: 'true'
       video = "$ctrl.currentVideo"
       />
     </div>
+    <button class="autoplay">Autoplay</button>
     <div class="col-md-5">
       <video-list 
         videos ="$ctrl.videos"
