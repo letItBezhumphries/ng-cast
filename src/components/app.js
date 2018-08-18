@@ -12,7 +12,7 @@ angular.module('video-player')
       this.videos = window.exampleVideoData; // 
       this.currentVideo = exampleVideoData[0]; // set the currentVideo to be the exampleVideoData at index 0
       this.videoclick = (video) => { //newVideo will need to be added manually in app.html
-        console.log(video);
+        // console.log(video);
         this.currentVideo = video; //setting the currentVideo to the clicked video
       };
     }
