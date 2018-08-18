@@ -4,10 +4,12 @@ angular.module('video-player')
     templateUrl: '/src/templates/app.html',
 
     controller: function(youTube) {
-      this.query = '';
+  
       this.data = window.YOUTUBE_API_KEY;
-      this.videos = window.exampleVideoData; // 
+      this.videos = window.exampleVideoData; 
       this.currentVideo = exampleVideoData[0]; // set the currentVideo to be the exampleVideoData at index 0
+      this.search = youTube.search;
+      
       this.videoclick = (video) => { //newVideo will need to be added manually in app.html
         // console.log(video);
         this.currentVideo = video; //setting the currentVideo to the clicked video
@@ -18,10 +20,16 @@ angular.module('video-player')
       //   this.currentVideo = this.videos[0];
       // };
 
+     this.appendvideos = (data) => {
+      this.videos = data;
+      this.currentVideo = data[0];
+     }
 
       this.searchthis = (data) => {
-        youTube.search(data)
-      }
+        console.log('eric is really cool ', data);
+        console.log('what is love ', this.query)
+        this.search(data, this.appendvideos);
+      };
     }
    
   });

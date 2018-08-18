@@ -1,11 +1,12 @@
 <div class="search-bar form-inline" >
   <input 
   ng-model= "boxval"
+  textsearch = "boxval"
     class="form-control" 
       type="text" />
-  <button ng-click='$ctrl.searchthis()'
+  <button ng-click='$ctrl.searchthis(boxval)'
     class="btn">
     <span class="glyphicon glyphicon-search"></span>
   </button>
 </div>
-<pre>{{boxval}}</pre>
+
