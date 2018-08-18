@@ -2,11 +2,14 @@ angular.module('video-player')
 
   .component('search', {
     bindings: {
-      search: '<',
-      textVal: '=',
+      searchvideos: '<',
+      textval: '<',
+      searchthis: '='
+    },
+    controller: function() {
+      this.search = () => {
+        youTube.search('anthony', this.searchvideos);
+      }
     },
     templateUrl: 'src/templates/search.html',
-    controller: function() {
-      
-    },
   });
